@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spinal Cord Stimulator / Pain Pump Tray - Surgery Center of San Diego Surgical Trays</title>
+  <style>
+    :root {
+      --ink: #18232f;
+      --muted: #647386;
+      --line: #d9e1e8;
+      --panel: #ffffff;
+      --bg: #eef3f5;
+      --green: #14755d;
+      --green-dark: #0b473c;
+      --lime: #d2e83b;
+      --blue: #1877bd;
+      --warn: #fff6d7;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      line-height: 1.4;
+    }
+
+    header {
+      background: var(--green-dark);
+      color: white;
+      padding: 28px 32px;
+      border-bottom: 8px solid var(--lime);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .mark {
+      width: 74px;
+      height: 74px;
+      border-radius: 8px;
+      background:
+        radial-gradient(circle at 50% 50%, rgba(255,255,255,.9) 0 24%, transparent 25%),
+        linear-gradient(135deg, var(--blue) 0 42%, transparent 43%),
+        linear-gradient(45deg, #9fd227 0 42%, transparent 43%),
+        #21a3c9;
+      border: 2px solid rgba(255,255,255,.25);
+      flex: none;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 48px);
+      letter-spacing: 0;
+      line-height: 1.05;
+    }
+
+    header p {
+      margin: 8px 0 0;
+      color: #d7e6e3;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 28px 24px 60px;
+    }
+
+    .notice {
+      background: var(--warn);
+      border: 1px solid #d7ac38;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-weight: 700;
+      color: #6d4300;
+      margin-bottom: 24px;
+    }
+
+    nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    nav a {
+      display: block;
+      padding: 16px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--green-dark);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .catalog {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px 22px;
+      margin-bottom: 24px;
+    }
+
+    .catalog h2 {
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .catalog > p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 14px;
+    }
+
+    .instrument-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #fbfcfd;
+      min-height: 230px;
+    }
+
+    .instrument-card img,
+    .instrument-card .placeholder {
+      width: 100%;
+      height: 138px;
+      display: block;
+      object-fit: contain;
+      background: #eef5f4;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .instrument-card .placeholder {
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      text-align: center;
+      color: var(--green-dark);
+      font-weight: 900;
+    }
+
+    .instrument-card h3 {
+      margin: 12px 12px 4px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    .instrument-card p {
+      margin: 0 12px 14px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin: 22px 0;
+      overflow: hidden;
+    }
+
+    .section-head {
+      padding: 20px 22px;
+      background: #f7faf9;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 12px 14px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #fbfcfd;
+      color: #445366;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+    .photo { width: 300px; }
+    .item { width: 56%; font-weight: 700; font-size: 18px; }
+    .qty { width: 12%; }
+
+    .photo-cell {
+      width: 300px;
+    }
+
+    .photo-link,
+    .photo-stack a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 260px;
+      height: 180px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #eef5f4;
+      overflow: hidden;
+    }
+
+    .photo-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .photo-stack a {
+      width: 86px;
+      height: 78px;
+    }
+
+    .photo-stack.two-photo-stack a {
+      width: 126px;
+      height: 112px;
+    }
+
+    .item-photo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      padding: 4px;
+      background: #eef5f4;
+    }
+
+    .sources {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-top: 26px;
+    }
+
+    .sources h2 { font-size: 22px; margin-bottom: 10px; }
+    .sources ul { margin: 0; padding-left: 20px; }
+    .sources li { margin: 7px 0; }
+    a { color: #0f6fb6; }
+
+    @media (max-width: 900px) {
+      nav { grid-template-columns: 1fr; }
+      table, thead, tbody, tr, th, td { display: block; }
+      thead { display: none; }
+      tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: start;
+        gap: 12px;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 0;
+      }
+      td { border: 0; padding: 8px 14px; }
+      td::before {
+        content: attr(data-label);
+        display: block;
+        color: var(--muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: .06em;
+        margin-bottom: 2px;
+      }
+      .with-photo tr {
+        grid-template-columns: 150px minmax(0, 1fr) auto;
+      }
+      td.item::before { display: none; }
+      td.photo-cell::before { display: none; }
+      td.photo-cell { padding-right: 0; }
+      .photo-link {
+        width: 136px;
+        height: 104px;
+      }
+      .photo-stack {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .photo-stack a {
+        width: 136px;
+        height: 74px;
+      }
+      td.qty::before { display: none; }
+      td.qty {
+        text-align: right;
+        white-space: nowrap;
+        font-weight: 800;
+        color: var(--green-dark);
+      }
+      .photo, .photo-cell, .item, .qty { width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="mark" aria-hidden="true"></div>
+      <div>
+        <h1>Spinal Cord Stimulator / Pain Pump Tray</h1>
+        <p>Surgery Center of San Diego Surgical Trays</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <nav aria-label="Tray navigation">
+      <a href="index.html">All Trays</a>
+      <a href="anterior-cervical-tray.html">Anterior Cervical Tray</a>
+      <a href="posterior-lumbar-tray.html">Posterior Lumbar Tray</a>
+      <a href="neuromodulation-tray.html">Spinal Cord Stimulator / Pain Pump Tray</a>
+    </nav>
+
+    <section id="neuromodulation">
+      <div class="section-head">
+        <h2>Spinal Cord Stimulator / Pain Pump Procedure</h2>
+        <p>For SCS lead / generator work and intrathecal pump catheter / pocket work.</p>
+      </div>
+      <table>
+        <thead>
+          <tr><th class="item"></th><th class="qty">Qty</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="item" data-label="">Metzenbaum and Mayo scissors</td><td class="qty" data-label="Qty">1 each</td></tr>
+          <tr><td class="item" data-label="">Adson, DeBakey, smooth pickups</td><td class="qty" data-label="Qty">1-2 each</td></tr>
+          <tr><td class="item" data-label="">Mosquito, Kelly, tonsil / long clamp</td><td class="qty" data-label="Qty">2-4 each</td></tr>
+          <tr><td class="item" data-label="">Army-Navy, Senn, rake, Gelpi, Weitlaner retractors</td><td class="qty" data-label="Qty">1-2 each</td></tr>
+          <tr><td class="item" data-label="">Penfield, Freer, blunt dissectors</td><td class="qty" data-label="Qty">1 each</td></tr>
+          <tr><td class="item" data-label="">Lead anchors, tunneling tool, torque wrench / screwdriver</td><td class="qty" data-label="Qty">Vendor kit</td></tr>
+          <tr><td class="item" data-label="">IPG pocket template and programmer</td><td class="qty" data-label="Qty">Vendor kit</td></tr>
+          <tr><td class="item" data-label="">Intrathecal needle, catheter, catheter passer / tunneler</td><td class="qty" data-label="Qty">Vendor kit</td></tr>
+          <tr><td class="item" data-label="">Pump connector tools and pump programmer</td><td class="qty" data-label="Qty">Vendor kit</td></tr>
+          <tr><td class="item" data-label="">Bipolar, Frazier suction</td><td class="qty" data-label="Qty">1 each</td></tr>
+          <tr><td class="item" data-label="">Needle drivers, suture scissors, skin stapler if used</td><td class="qty" data-label="Qty">Assorted</td></tr>
+          <tr><td class="item" data-label="">C-arm / fluoroscopy setup</td><td class="qty" data-label="Qty">1</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
